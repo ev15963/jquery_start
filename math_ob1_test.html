@@ -1,0 +1,28 @@
+<script>
+    var num = 2.1234;
+
+    var maxNum = Math.max(10,5,8,30),
+    minNum = Math.min(10,5,8,30),
+    roundNum = Math.min(num),
+    floorNum = Math.floor(num),
+    ceilNum = Math.ceil(num),
+    rndNum = Math.random(),
+    piNum = Math.PI;
+
+    document.write(maxNum, "<br>");
+    document.write(minNum, "<br>");
+    document.write(roundNum, "<br>");
+    document.write(floorNum, "<br>");
+    document.write(ceilNum, "<br>");
+    document.write(rndNum, "<br>");
+    document.write(piNum, "<br>");
+
+    // 0부터 10까지 난수 반환
+    var randomNum = Math.random()*10;
+
+    //0부터 10까지 난수 발생하여 소수점 값 제거
+    var randomFloor = Math.floor(Math.random()*11);
+
+    document.write(randomNum, "<br>");
+    document.write(randomFloor, "<br>");
+</script>
