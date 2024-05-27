@@ -1,0 +1,31 @@
+screen 객체 속성
+screen.width : 화면의 너빗값을 반환
+screen.height : 화면의 높잇값을 반환
+screen.availWidth : 작업 표시줄 제외한 화면의 너빗값 반환
+screen.availHeight : 작업 표시줄 제외한 화면의 높잇값 반환
+screen.colorDepth : 사용자가 모니터가 표현 가능한 컬러 bit 반환
+
+location 객체 속성
+location.href : 주소영역의 참조 주소를 설정하거나 url을 반환
+location.hash : url 해시값을 반환
+location.hostname : url의 호스트 이름을 설정하거나 반환
+location.host : url의 호스트 이름과 포트 번호를 반환
+location.protocol : url의 프로토콜을 반환
+location.search : url의 쿼리(요청값) 반환
+location.reload() : 마치 브라우저에서 f5 키를 누른것처럼 새로 고침
+
+history 객체 속성
+history.back() : 이전 방문 사이트로 이동
+history.forward() : 다음 방문 사이트로 이동
+history.go(이동 숫자) : 이동 숫자 -2를 입력하면 2단계 이전의 방문 사이트로 이동합니다.
+history.length : 방문 기록에 저장된 목록의 개수를 반환
+
+navigator
+navigator.appCodeName : 현재 브라우저의 코드명 반환 ex) Mozila
+navigator.appName : 현재 부라우저의 이름 반환 ex) Netscape
+navigator.appVersion : 현재 브라우저의 버전 정보 반환 ex) 5.0(windows)
+navigator.language : 브라우저 사용하고 있는 언어 ex) ko
+navigator.product : 브라우저 엔진 이름 반환 ex) gecko 반환
+navigator.platform : 운영체제 정보 ex) 브라우저가 32비트로 설치 되있다면 Win32
+navigator.onLine : 온라인 상태 여부 제공 ex) true /false
+navigator.userAgent : 브라우저 운영체제 종합 정보제공
