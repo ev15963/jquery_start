@@ -1,0 +1,21 @@
+<script>
+// 호이스팅 적용하면 함수 정의문 보다 호출문이 먼저 나와도 함수 정의문을 끌어올려 함수 호출
+var count =0;
+
+myFnc();
+
+function myFnc() {
+    count++;
+    document.write("hello"+count, "<br>");
+}
+
+myFnc();
+
+var theFnc = function() {
+    count++;
+    document.write("bye"+count, "<br>");
+}
+
+theFnc();
+
+</script>
