@@ -1,0 +1,3 @@
+setInterval() : 일정한 시간 간격으로 코드 반복 실행 ex) 3초마다 실행
+setTimeout() : 일정한 시간 이후에 코드 실행 종료 ex) 3초후 종료
+clearInterval() : setInterval 취소
