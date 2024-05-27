@@ -1,0 +1,11 @@
+브라우저 객체란? 브라우저에 내장된 객체
+window : 브라우저 객체 중 최상위 객체
+window 객체는 하위객체가 포함
+BOM 브라우저 객체 모델 : 계층적 구조로 이루어짐
+window
+    document
+        body, div, img, a, form, input 등
+    screen
+    location
+    history
+    navigator
