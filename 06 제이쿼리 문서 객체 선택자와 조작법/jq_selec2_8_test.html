@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8">
+    <title> 선택자 </title>
+    <script src="js/jquery.js"></script>
+<script>
+    $(function(){
+        var arr1 = [{
+            "area" : "서울",
+            "name" : "무대리"
+        }, {
+            "area" : "부산",
+            "name" : "홍과장"
+        }, {
+            "area" : "대전",
+            "name" : "박사장"
+        }, {
+            "area" : "서울",
+            "name" : "빅마마"
+        }]
+
+        var arr2 = $.map(arr1, function(a, b) {
+            // 배열의 데이터 수만큼 메서드가 실행 
+            // 객체 area 속성이 서울 이면 새 배열에 객체 (매개변수a)를 저장 후
+            // 새롭게 가공된 배열 객체 반환
+            if (a.area == "서울"){
+                return a;
+            }
+        });
+        console.log(arr2);
+        console.log("==== first End ====");
+
+        var arr3 = $.grep(arr2, function(a,b){
+           if(a.area == "서울"){
+                return true;
+            } else {
+                return false;
+            }
+        });
+        console.log(arr3);
+        console.log("==== Second End ====");
+    });
+</script>
