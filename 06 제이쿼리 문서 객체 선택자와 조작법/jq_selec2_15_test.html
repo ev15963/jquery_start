@@ -3,6 +3,8 @@
     <title> 선택자 </title>
     <script src="js/jquery.js"></script>
     <script>
+        // is 메서드 : 선택한 요소 상태가 지정된 속성과 일치하면 true, 아니면 false
+        // $("요소 선택").is(":[checked|selected|visible|hidden|animated]");
         $(function(){
             var result_1 = $("inner_1 p").eq(0).is(":visible");
             console.log(result_1); //true
