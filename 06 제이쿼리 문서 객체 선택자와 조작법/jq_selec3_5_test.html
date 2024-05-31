@@ -3,6 +3,8 @@
     <title> 선택자 </title>
     <script src="js/jquery.js"></script>
     <script>
+        // prop() 메서드 선택한 폼요소(선택상자, 체크 박스, 라디오 버튼)의 상태 속성값을 가져오거나 새롭게 설정할때 사용
+        // 선택한 요소의 태그명(tagName), 노드타입(nodeType), 선택 상자의 선택된 옵션의 인덱스 값도 알 수 있다.
        $(function(){
             // id 값이 "chk1"인 요소가 체크된 상태이면 true를 반환하며 reuslt_1에 저장합니다(반대의 경우는 false)
             var result_1 = $("#chk1").prop("checked");
