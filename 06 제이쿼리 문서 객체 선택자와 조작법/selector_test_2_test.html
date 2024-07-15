@@ -1,0 +1,16 @@
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    // 제이쿼리 위치 탐색자를 이용해 세 번째 <li> 태그만 선택하여 배경을 노란색으로 적용
+    $(function(){
+        $('li:nth-child(3)').css('background-color', 'yellow');
+    });
+</script>
+
+<body>
+<ul id="myList">
+    <li>내용1</li>
+    <li>내용2</li>
+    <li>내용3</li>
+    <li>내용4</li>
+</ul>
+</body>
