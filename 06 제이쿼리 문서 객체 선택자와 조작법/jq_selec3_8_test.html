@@ -1,0 +1,25 @@
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(function(){
+        var topNum = $("h1").offset().top;
+        $(window).scrollTop(topNum);
+
+        var sct = $(window).scrollTop();
+        console.log(sct);   // 2000
+    });
+</script>
+<!--/* 스크롤 5천px 밑에서 */-->
+
+<style>
+    *{ margin:0; padding:0; }
+    body{ line-height:1; }
+    #wrap{
+        height:5000px;  
+        padding-top:2000px;
+    }
+</style>
+<body>
+    <div id="wrap">
+        <h1>위치 메서드</h1>
+    </div>
+</body>
