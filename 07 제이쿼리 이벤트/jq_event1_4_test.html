@@ -1,0 +1,23 @@
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(function(){
+        $(document).ready(function() {
+            var h1 = $(".img1").height();
+            console.log("ready : ", h1); // ready : 0
+        });
+
+        // TypeError: url.indexOf is not a function
+        // jQuery 1.8 버전 이후로 load(), unload(), error()가 deprecated 되었으며, 
+        // jQuery 3.0 버전 이후 해당 기능은 제거되어 발생하는 현상이다.
+        // https://oper0116.tistory.com/26
+        $(window).on('load', function() {
+            var h2 = $(".img1").height();
+            console.log("load : ", h2); // load : 300
+        });
+    });
+</script>
+<body>
+    <p>
+        <img src="http://place-hold.it/300X300" class="img1">
+    </p>
+</body>
