@@ -1,0 +1,34 @@
+<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+<script>
+    $(function() {
+        $(".btn1").on({
+            // mouseover() : 선택한 요소에 마우스 포인터를 올릴 때마다 이벤트를 발생
+            "mouseover": function() {
+                $(".txt1").css({"background-color": "yellow"})
+            },
+            // mouseout() : 선택한 요소에서 마우스 포인터가 벗어날 때 마다 이벤트를 발생시키거나
+            // 선택한 요소에 mouseout 이벤트를 강제 발생
+            "mouseout" : function() {
+                $(".txt1").css({"background": "none"});
+            }
+        });
+
+        // hover() : 선택한 요소에 마우스 포인터가 올라갈 때와 선택한 요소에서 벗어날 때 각각 이벤트를 발생
+        // 각각 이벤트 핸들러를 실행
+        $(".btn2").hover(function() {
+            $(".txt2").css({"background-color": "aqua"});
+        }, function() {
+            $(".txt2").css({"background": "none"});
+        });
+    });
+</script>
+<body>
+    <p>
+        <button class="btn1">Mouse Over/Mouse Out</button>
+    </p>
+    <p class="txt1">내용1</p>
+    <p>
+        <button class="btn2">Hover</button>
+    </p>
+    <p class="txt2">내용2</p>
+</body>
