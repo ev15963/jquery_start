@@ -8,3 +8,16 @@
   - layerX : position을 적용한 요소를 기준으로 마우스 포인터의 X 좌표값을 반환
   - layerY : position을 적용한 요소를 기준으로 마우스 포인터의 Y 좌표값을 반환
   - button : 마우스 버튼의 종류에 따라 값을 반환 (왼쪽: 0, 휠: 1, 오른쪽: 2)
+
+2. 키보드 이벤트
+  - keyCode : 키보드의 아스키 코드값을 반환
+  - altKey : 이벤트 발생 시 Alt 키가 눌렀으면 true를, 아니면 false를 반환
+  - ctrlKey : 이벤트 발생 시 Ctrl 키가 눌렀으면 true를, 아니면 false를 반환
+  - shiftKey : 이벤트 발생 시 Shift 키가 눌렀으면 true를, 아니면 false를 반환
+
+3. 전체 이벤트
+  - target : 이벤트가 전파된 마지막 요소를 가리킴.
+  - cancelBubble : 이벤트의 전파를 차단하는 속성으로, 기본값은 false며, true로 설정하면 전파가 차단됨.
+  - stopPropagation() : 이벤트의 전파를 차단.
+  - preventDefault() : 기본이벤트를 차단.
+      ex) <a>에 클릭 이벤트를 적용하고 사용자가 이벤트를 발생시키면 기본 이벤트가 등록되어 있어 링크 주소로 이동하는데, 이런 기본 이벤트를 차단할 수 있다.
