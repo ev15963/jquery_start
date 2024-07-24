@@ -1,0 +1,19 @@
+효과 메서드
+- 선택한 요소를 역동적으로 숨겼다가 보이게 만드는 기능을 가진 메서드
+
+효과 메서드 종류
+1. 숨김
+  - hide() : 요소를 숨깁니다.
+  - fadeOut() : 요소가 점점 투명해지면서 사라짐.
+  - slideUp() : 요소가 위로 접히며 숨겨짐.
+
+2. 노출
+  - show() : 숨겨진 요소가 노출.
+  - fadeIn() : 숨겨진 요소가 점점 선명해짐.
+  - slideDown() : 숨겨진 요소가 아래로 펼쳐짐.
+
+3. 노출, 숨김
+  - toggle() : hide(), show() 효과를 적용.
+  - fadeToggle() ; fadeIn(), fadeOut() 효과를 적용.
+  - slideToggle() : slideUp(), slideDown() 효과를 적용.
+  - fadeTo() : 지정한 투명도를 적용.
