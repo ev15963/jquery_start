@@ -1,0 +1,20 @@
+$.ajax() 메서드의 옵션 종류
+  - async : 통신을 동기 또는 비동기 방식으로 설정하는 옵션.
+  - beforeSend : 요청하기 전에 함수를 실행하는 이벤트 핸들러입니다.
+  - cache : 요청한 페이지를 인터넷에 캐시(저장)할지의 여부를 설정. 기본값은 true.
+  - complete : Ajax가 완료되었을 때 함수를 실행하는 이벤트 핸들러.
+  - contentType : 서버로 전송할 데이터의 content-type을 설정. 기본 값은 application/x-www-form urlencoded입니다.
+  - data : 서버로전송할 데이터를 지정.
+  - dataType : 서버에서 받아올 데이터의 형식을 지정. 생략하면 요청한 자료에 맞게 자동으로 형식이 설정.
+  - error : 통신에 문제가 발생했을 때 함수를 실행
+  - timeout : 통신 시간을 제한. 시간 단위는 밀리초.
+  - type : 데이터를 전송할 방식(get/post)을 설정.
+  - url : 데이터를 전송할 페이지를 설정. 기본값은 현재 페이지.
+  - username : HTTP 액세스를 할 때 인증이 필요한 경우 사용자 이름을 지정.
+
+Ajax 전송 데이터 가공 메소드의 종류
+  - serialize() : 사용자가 입력 요소에 값을 입력한 데이터의 전송 방식을 'name1=value1 & name2=value2, ... '와 같은 쿼리 스트링 형식의 데이터로 변환해 반환. ex) d$("form").serialize();
+  - serializeArray() : 사용자가 입력 요소에 값을 입력한 데이터의 전송 방식을 [{name1: value1}, {name2: value2}]와 같은 배열 객체로 변환해 반환. ex) $("form").serializeArray();
+  - $param() : {name1: value1, name2 : value2}와 같이 작성된 객체를 가공해 'name1=value1 & name2=value2, ...'와 같은 쿼리 스트링 형식의 데이터로 변환해 반환. ex) $.param(Object);
+  - JSON.parse() : '객체 형태'로 작성한 문자열 데이터를 객체로 가공하여 반환. ex) JSON.parse({"name":"value"})
+  - JSON.stringify() : 객체를 문자열 데이터로 가공하여 반환. ex) JSON.stringify({"name1":"value1", "name2":"value2"})
