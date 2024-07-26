@@ -1,0 +1,14 @@
+ajax : 클라이언트 (이용자)가 비동기 방식으로 자바스크립트를 이용하여 화면 전환 없이 서버 측에 자료 (XML, HTML, JSON, 텍스트 유형 등) 요청할 때 사용
+종류
+- load() : 외부 콘텐츠를 가져올 때 사용.
+- $.ajax() : 데이터 서버에 HTTP POST, GET 방식으로 전송할 수 있으며, HTML, XML, JSON, 텍스트 유형에 데이터 요청할 수 있는 통합적인 메서드.  ($.post(), $.get(), $.getJSON() 메서드 기능을 하나로 합쳐 놓음)
+- $.post() : 데이터를 서버에 HTTP POST 방식으로 전송한 후 서버 측의 응답을 받을 때 사용.
+- $.get() : 데이터를 서버에 HTTP GET 방식으로 전송한 후 서버 측의 응답을 받을 때 사용.
+- $.getJSON() : 데이터를 서버에 HTTP GET 방식으로 전송한 후 서버 측의 응답을 JSON 형식으로 받을 때 사용합니다.
+- $.getScript() : Ajax를 이용하여 외부 스크립트를 불러옴.
+                  $("button").click(function() {
+                    $.getScript("demo_ajax_script.js");
+                  });
+- .ajaxStop(function() { ... }) : 비동기 방식으로 서버에 응답 요청이 완료되었을 때 함수가 실행됨.
+- .ajaxSuccess(function() { ... }) : ajax 요청이 성공적으로 완료되면 함수가 실행.
+- ajaxComplete(function() { ... }) : Ajax 통신이 완료되면 함수가 실행.
