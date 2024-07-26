@@ -9,6 +9,9 @@
             // todo. 버튼을 누를 때마다 애니메이션 메서드를 이용하여 <p> 태그가 50px 단위로 오른쪽으로 이동되도록 만들어 보세요.
             // 단, 이동 속도는 0.5초로 설정하세요.
             $(function(){
+                $("#btn").click(function() {
+                    $("#ctx").animate({marginLeft:"+=50px"}, 500);
+                })
             });
         </script>
     </head>
