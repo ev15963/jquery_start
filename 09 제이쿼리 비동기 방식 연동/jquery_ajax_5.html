@@ -8,34 +8,45 @@
         <script>
             $(function() {
                 $.ajax({
-                    url:"https://www.chosun.com/arc/outboundfeeds/rss/?outputType=xml",
+                    url:"./js/chosun.xml",
+                    method: "get",
                     dataType:"xml",
+                    beforeSend: function (xhr) {
+                        xhr.setRequestHeader("Content-type","application/json");
+                        xhr.setRequestHeader("Access-Control-Allow-Methods", "POST, GET, OPTIONS, DELETE");
+                        xhr.setRequestHeader("Access-Control-Allow-Origin", "*");
+                    },
                     success:function(data) {
-                        var $items = $(data).find("item");
-                        
-                        if($items.length > 0) {
-                            $items = $items.slice(0,10);
-                            var $ulTag = $("<ul />");
-                            
-                            $.each($items, function(i, o) {
-                                var $title = $(o).find("title").text();
-                                var $link = $(o).find("link").text();
+                       var $items = $(data).find("item");
+                       
+                       if($items.length > 0) {
+                           $items = $items.slice(0,10);
+                           var $ulTag = $("<ul />");
+                           
+                           $.each($items, function(i, o) {
+                               var $title = $(o).find("title").text();
+                               var $link = $(o).find("link").text();
 
-                                var $aTag = $("<a />")
-                                .attr({
-                                    "href":$link,
-                                    "target":"_blank"
-                                })
-                                .text($title);
+                               var $aTag = $("<a />")
+                               .attr({
+                                   "href":$link,
+                                   "target":"_blank"
+                               })
+                               .text($title);
 
-                                var $liTag = $("<li/>")
-                                .append($aTag);
+                               var $liTag = $("<li/>")
+                               .append($aTag);
 
-                                $ulTag.append($liTag);
+                               $ulTag.append($liTag);
 
-                            });
-                            $(".wrap").append($ulTag);
-                        }
+                           });
+                           $(".wrap").append($ulTag);
+                       //    $(".wrap").append('success');
+                       }
+                    },
+                    error:function(e) {
+                        console.log(e);
+                        $(".wrap").append('error : ');
                     }
                 })
             });
